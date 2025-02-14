@@ -6,30 +6,27 @@ using System.Threading.Tasks;
 
 namespace COMP003A.ZooManagementSystem
 {
-
-    /// <summary>
-    /// represents animal abstract class
-    /// </summary>
-    abstract class Animal
+    class Animal
     {
         //fields
         private string _name;
         private string _species;
-        private string _makesound;
 
         //properties
-
-        /// <summary>
-        /// abstract method for name and species
-        /// </summary>
-        public string Name { get; set; }
-        public string Species { get; set; }
-        public string Makesound { get; set; }
-
-
-        /// <summary>
-        /// represents sound abstract method 
-        /// </summary>
-        class MakeSound();
-    }  
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public string Species
+        {
+            get { return _species; }
+            set { _species = value; }
+        }
+        //will display "sound"
+        public virtual void MakeSound()
+        {
+            Console.WriteLine(MakeSound);
+        }
+    }
 }

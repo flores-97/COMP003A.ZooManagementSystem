@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace COMP003A.ZooManagementSystem
 {
-    class Lion : Animal
+    class Parrot : Animal
     {
-        public Lion() 
+        public Parrot()
         {
-            Name = "Lion";
+            Name = "Parrot";
         }
         public override void MakeSound()
         {
-            Console.WriteLine("The lion roars!");
+            Console.WriteLine("The parrot squawks!");
         }
     }
 }

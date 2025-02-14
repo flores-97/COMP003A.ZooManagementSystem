@@ -8,7 +8,8 @@ namespace COMP003A.ZooManagementSystem
     {
         static void Main(string[] args)
         {
-            Animal myLion = new Lion();
+
         }
+        class ZooUtility
     }
 }
