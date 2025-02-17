@@ -15,7 +15,8 @@ namespace COMP003A.ZooManagementSystem
         /// <returns></returns>
         public string DescribeAnimal(string name)
         {
-            Console.WriteLine(name);
+            Console.WriteLine("(Name Only");
+            Console.WriteLine($"");//name goes here
         }
 
         /// <summary>
@@ -26,7 +27,8 @@ namespace COMP003A.ZooManagementSystem
         /// <returns></returns>
         public string DescribeAnimal(string name, string species)
         {
-            Console.WriteLine(name, species);
+            Console.WriteLine("(Name and Species");
+            Console.WriteLine($"");// name and species goes here
         }
 
         /// <summary>
@@ -38,7 +40,8 @@ namespace COMP003A.ZooManagementSystem
         /// <returns></returns>
         public string DescribeAnimal(string name, string species, int age)
         {
-            Console.WriteLine(name, species, age);
+            Console.WriteLine("(Name and Species");
+            Console.WriteLine($"");// name, species, and age goes here
         }
     }
 }
