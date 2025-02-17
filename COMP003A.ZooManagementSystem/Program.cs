@@ -10,7 +10,10 @@ namespace COMP003A.ZooManagementSystem
     {
         static void Main(string[] args)
         {
+            Animal animal = new Animal();
+
             List<Animal> animals = new List<Animal>();
+
             List<Lion> myLion = new List<Lion>();
             List<Parrot> myParrot = new List<Parrot>();
 
@@ -46,7 +49,7 @@ namespace COMP003A.ZooManagementSystem
                         try
                         {
                             Console.Write("Enter the name of the lion: ");
-                            myLion.Add(Console.ReadLine());
+                            string Name = Console.ReadLine();
                                
                             if (string.IsNullOrWhiteSpace(Name))  throw new Exception("Lion's name cannot be blank.");
                             break;
@@ -117,8 +120,8 @@ namespace COMP003A.ZooManagementSystem
                 else if (choice == 3)
                 {//this area needs work 
                     Console.WriteLine("\nDisplaying all Animals:");
-                    myLion.MakeSound();//lines will make sound and place animals name and species
-                    myParrot.MakeSound();
+                    Console.WriteLine($"{animal.MakeSound} {myLion}");
+                    Console.WriteLine($"{animal.MakeSound} {myParrot}");
                 }
 
                 else if (choice == 4)
