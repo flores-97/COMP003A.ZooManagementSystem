@@ -2,13 +2,17 @@
 // Course: COMP-003A
 // Faculty: Jonathan Cruz
 // Purpose: Zoo management system demonstrating inheritance, abstraction, polymorphism, and method overloading in C#
+using Microsoft.VisualBasic;
+
 namespace COMP003A.ZooManagementSystem
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            List<Animal> list = new List<Animal>();
+            List<Animal> animals = new List<Animal>();
+            List<Lion> myLion = new List<Lion>();
+            List<Parrot> myParrot = new List<Parrot>();
 
             ZooUtility utility = new ZooUtility();
 
@@ -42,7 +46,7 @@ namespace COMP003A.ZooManagementSystem
                         try
                         {
                             Console.Write("Enter the name of the lion: ");
-                            string Name = Console.ReadLine();
+                            myLion.Add(Console.ReadLine());
                                
                             if (string.IsNullOrWhiteSpace(Name))  throw new Exception("Lion's name cannot be blank.");
                             break;
@@ -111,9 +115,10 @@ namespace COMP003A.ZooManagementSystem
 
 
                 else if (choice == 3)
-                {
+                {//this area needs work 
                     Console.WriteLine("\nDisplaying all Animals:");
-                   //lines will make sound and place animals name and species
+                    myLion.MakeSound();//lines will make sound and place animals name and species
+                    myParrot.MakeSound();
                 }
 
                 else if (choice == 4)

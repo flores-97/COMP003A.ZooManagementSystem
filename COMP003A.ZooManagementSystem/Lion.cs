@@ -11,6 +11,7 @@ namespace COMP003A.ZooManagementSystem
         public Lion() 
         {
             Name = "Lion";
+            Species = "Panthera leo";
         }
         public override void MakeSound()
         {
