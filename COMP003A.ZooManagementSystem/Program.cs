@@ -8,12 +8,13 @@ namespace COMP003A.ZooManagementSystem
     {
         static void Main(string[] args)
         {
-            List<Lion> lions = new List<Lion>();
-            lions.Add(new Lion());
+            List<string> lionNames = new List<string>();
+            List<string> lionSpecies = new List<string>();
 
-            List<Parrot> parrots = new List<Parrot>();
-            parrots.Add(new Parrot());
+            List<string> parrotNames = new List<string>();
+            List<string> parrotSpecies = new List<string>();
 
+            ZooUtility utility = new ZooUtility();
 
             Console.WriteLine("Welcome to the Zoo Management System!");
 
@@ -44,10 +45,13 @@ namespace COMP003A.ZooManagementSystem
                     {
                         try
                         {
-                            Console.Write("Enter the name of the lion: ");
-                            string Name = Console.ReadLine();
-                            if (string.IsNullOrWhiteSpace(Name)) throw new Exception("Lion's name cannot be blank.");
-                            break;
+                            for (int i = 0; i < lionNames.Count; i++)
+                            {
+                                Console.Write("Enter the name of the lion: ");
+                                lionNames.Add(Console.ReadLine());
+                            }   
+                            if (string.IsNullOrWhiteSpace(default)) break; 
+                            throw new Exception("Lion's name cannot be blank.");
                         }
                         catch (Exception ex)
                         {
@@ -113,8 +117,7 @@ namespace COMP003A.ZooManagementSystem
                 else if (choice == 3)
                 {
                     Console.WriteLine("Displaying all Animals:");
-                    Console.WriteLine($"");//lines will make sound and place animals name and species
-                    Console.WriteLine($"");
+                    Console.WriteLine(utility);//lines will make sound and place animals name and species
                 }
 
                 else if (choice == 4)
