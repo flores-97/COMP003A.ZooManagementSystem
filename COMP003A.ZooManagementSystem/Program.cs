@@ -8,11 +8,7 @@ namespace COMP003A.ZooManagementSystem
     {
         static void Main(string[] args)
         {
-            List<string> lionNames = new List<string>();
-            List<string> lionSpecies = new List<string>();
-
-            List<string> parrotNames = new List<string>();
-            List<string> parrotSpecies = new List<string>();
+            List<Animal> list = new List<Animal>();
 
             ZooUtility utility = new ZooUtility();
 
@@ -45,19 +41,19 @@ namespace COMP003A.ZooManagementSystem
                     {
                         try
                         {
-                            for (int i = 0; i < lionNames.Count; i++)
-                            {
-                                Console.Write("Enter the name of the lion: ");
-                                lionNames.Add(Console.ReadLine());
-                            }   
-                            if (string.IsNullOrWhiteSpace(default)) break; 
-                            throw new Exception("Lion's name cannot be blank.");
+                            Console.Write("Enter the name of the lion: ");
+                            string Name = Console.ReadLine();
+                               
+                            if (string.IsNullOrWhiteSpace(Name))  throw new Exception("Lion's name cannot be blank.");
+                            break;
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine($"{ex.Message}\nPlease try agian.\n");
                         }
+                        
                     }
+                    
 
                     while (true)
                     {
@@ -116,13 +112,13 @@ namespace COMP003A.ZooManagementSystem
 
                 else if (choice == 3)
                 {
-                    Console.WriteLine("Displaying all Animals:");
-                    Console.WriteLine(utility);//lines will make sound and place animals name and species
+                    Console.WriteLine("\nDisplaying all Animals:");
+                   //lines will make sound and place animals name and species
                 }
 
                 else if (choice == 4)
                 {
-                    //will display all of animals description
+                    Console.WriteLine(utility);//will display all of animals description
                 }
 
                 else

@@ -15,7 +15,7 @@ namespace COMP003A.ZooManagementSystem
         /// <returns></returns>
         public string DescribeAnimal(string name)
         {
-            return DescribeAnimal(name);
+            return DescribeAnimal($"Animal Name: {name}");
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace COMP003A.ZooManagementSystem
         /// <returns></returns>
         public string DescribeAnimal(string name, string species)
         {
-            return DescribeAnimal(name, species);
+            return DescribeAnimal($"Animal Name: {name}, Species: {species}");
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace COMP003A.ZooManagementSystem
         /// <returns></returns>
         public string DescribeAnimal(string name, string species, int age)
         {
-            return DescribeAnimal(name, species, age);
+            return DescribeAnimal($"Animal Name: {name}, Species: {species}, Age: {age} years old");
         }
     }
 }
