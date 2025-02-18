@@ -11,13 +11,10 @@ namespace COMP003A.ZooManagementSystem
         static void Main(string[] args)
         {
             Animal animal = new Animal();
-
+            
             List<Animal> animals = new List<Animal>();
-
-            List<Lion> myLion = new List<Lion>();
-            List<Parrot> myParrot = new List<Parrot>();
-
-            ZooUtility utility = new ZooUtility();
+            animals.Add(new Lion());
+            animals.Add(new Parrot());
 
             Console.WriteLine("Welcome to the Zoo Management System!");
 
@@ -27,7 +24,7 @@ namespace COMP003A.ZooManagementSystem
 
             while (true)
             {
-                Console.WriteLine("\nInventory Management System Menu: ");
+                Console.WriteLine("\nInventory Management System Menu: \n");
                 Console.WriteLine("1. Add a Lion");
                 Console.WriteLine("2. Add a Parrot");
                 Console.WriteLine("3. Display All Animals");
@@ -48,7 +45,7 @@ namespace COMP003A.ZooManagementSystem
                     {
                         try
                         {
-                            Console.Write("Enter the name of the lion: ");
+                            Console.Write("\nEnter the name of the lion: ");
                             string Name = Console.ReadLine();
                                
                             if (string.IsNullOrWhiteSpace(Name))  throw new Exception("Lion's name cannot be blank.");
@@ -120,13 +117,13 @@ namespace COMP003A.ZooManagementSystem
                 else if (choice == 3)
                 {//this area needs work 
                     Console.WriteLine("\nDisplaying all Animals:");
-                    Console.WriteLine($"{animal.MakeSound} {myLion}");
-                    Console.WriteLine($"{animal.MakeSound} {myParrot}");
+                    Console.WriteLine($"{animal.MakeSound}");
+                    Console.WriteLine($"{animal.MakeSound}");
                 }
 
                 else if (choice == 4)
                 {
-                    Console.WriteLine(utility);//will display all of animals description
+                    //will display all of animals description
                 }
 
                 else

@@ -8,11 +8,22 @@ namespace COMP003A.ZooManagementSystem
 {
     class Lion : Animal
     {
-        public Lion() 
+        //auto implement property
+        public string Name { get; set; }
+        public string Species { get; set; }
+
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="species"></param>
+        public Lion(string name, string species) 
         {
-            Name = "Lion";
-            Species = "Panthera leo";
+            Name = name;
+            Species = species;
         }
+
+
         public override void MakeSound()
         {
             Console.WriteLine("The lion roars!");

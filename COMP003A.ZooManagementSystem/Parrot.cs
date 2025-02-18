@@ -8,13 +8,23 @@ namespace COMP003A.ZooManagementSystem
 {
     class Parrot : Animal
     {
-        public Parrot()
+        //auto implement property
+        public string Name { get; set; }
+        public string Species { get; set; }
+
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="species"></param>
+        public Parrot(string name, string species)
         {
-            Name = "Parrot";
+            Name = name;
+            Species = species;
         }
         public override void MakeSound()
         {
-            Console.WriteLine("The parrot squawks!");
+            Console.WriteLine("The bird squawks!");
         }
     }
 }

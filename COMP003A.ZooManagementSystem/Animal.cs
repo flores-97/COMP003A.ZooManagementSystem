@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP003A.ZooManagementSystem
 {
-    class Animal
+    abstract class Animal
     {
         //fields
         private string _name;
@@ -16,19 +16,27 @@ namespace COMP003A.ZooManagementSystem
         public string Name
         {
             get { return _name; }
-            set { _name = value; }
+            set {
+                if (string.IsNullOrWhiteSpace(_name)) ;
+                else
+                {
+                    _name = value;
+                }
+            }
         }
         public string Species
         {
             get { return _species; }
-            set { _species = value; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(_species)) ;
+                else
+                {
+                    _species = value;
+                }
+            }
         }
         //will display "sound"
-        public virtual void MakeSound()
-        {
-            Console.WriteLine(MakeSound);
-        }
-
-
+        public abstract void MakeSound();
     }
 }
