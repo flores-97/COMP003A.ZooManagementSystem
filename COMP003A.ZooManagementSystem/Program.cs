@@ -12,14 +12,17 @@ namespace COMP003A.ZooManagementSystem
         static void Main(string[] args)
         {
 
-
             List<Animal> animals = new List<Animal>();
 
             Lion lion = new Lion();
             animals.Add(lion);
+            lion.Name = Console.ReadLine();
+            lion.Species = Console.ReadLine();
 
             Parrot parrot = new Parrot();
             animals.Add(parrot);
+            parrot.Name = Console.ReadLine();
+            parrot.Species = Console.ReadLine();
 
 
             Console.WriteLine("Welcome to the Zoo Management System!");
