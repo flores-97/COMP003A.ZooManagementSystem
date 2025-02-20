@@ -8,10 +8,10 @@
         /// </summary>
         /// <param name="name"></param>
         /// <param name="species"></param>
-        public Lion(string lionName, string lionSpecies) 
+        public Lion(string Name, string Species) 
         {
-            Name = lionName;
-            Species = lionSpecies;
+            Name = Name;
+            Species = Species;
         }
         public override void MakeSound()
         {

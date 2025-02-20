@@ -16,9 +16,10 @@ namespace COMP003A.ZooManagementSystem
             List<Animal> animals = new List<Animal>();
 
             Lion lion = new Lion();
-            lion.Add(lion);
+            animals.Add(lion);
 
             Parrot parrot = new Parrot();
+            animals.Add(parrot);
 
 
             Console.WriteLine("Welcome to the Zoo Management System!");
@@ -50,7 +51,7 @@ namespace COMP003A.ZooManagementSystem
                         try
                         {
                             Console.Write("\nEnter the name of the lion: ");
-                            Name.Add(Console.ReadLine());
+                            string Name = Console.ReadLine();
 
                             if (string.IsNullOrWhiteSpace(Name)) throw new Exception("\nLion's name cannot be blank.");
                             break;
