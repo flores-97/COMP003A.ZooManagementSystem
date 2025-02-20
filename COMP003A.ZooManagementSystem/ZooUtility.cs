@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace COMP003A.ZooManagementSystem
 {
-    internal class ZooUtility
+    public class ZooUtility
     {
         /// <summary>
         /// display animal name 
         /// </summary>
         /// <param name="name"></param>
-        /// <returns></returns>
-        public string DescribeAnimal(string name)
+        public static void DescribeAnimal(string name)
         {
-            return DescribeAnimal($"Animal Name: {name}");
+            Console.WriteLine($"Animal Name: {name}");
         }
 
         /// <summary>
@@ -23,10 +22,10 @@ namespace COMP003A.ZooManagementSystem
         /// </summary>
         /// <param name="name"></param>
         /// <param name="species"></param>
-        /// <returns></returns>
-        public string DescribeAnimal(string name, string species)
+        public static void DescribeAnimal(string name, string species)
         {
-            return DescribeAnimal($"Animal Name: {name}, Species: {species}");
+            DescribeAnimal(name);
+            Console.WriteLine($"Animal Species: {species}");
         }
 
         /// <summary>
@@ -35,10 +34,10 @@ namespace COMP003A.ZooManagementSystem
         /// <param name="name"></param>
         /// <param name="species"></param>
         /// <param name="age"></param>
-        /// <returns></returns>
-        public string DescribeAnimal(string name, string species, int age)
+        public static void DescribeAnimal(string name, string species, int age)
         {
-            return DescribeAnimal($"Animal Name: {name}, Species: {species}, Age: {age} years old");
+            DescribeAnimal(name, species);
+            Console.WriteLine($"Animal Age: {age} years old");
         }
     }
 }

@@ -2,6 +2,7 @@
 // Course: COMP-003A
 // Faculty: Jonathan Cruz
 // Purpose: Zoo management system demonstrating inheritance, abstraction, polymorphism, and method overloading in C#
+using System.Xml.Linq;
 using Microsoft.VisualBasic;
 
 namespace COMP003A.ZooManagementSystem
@@ -10,14 +11,17 @@ namespace COMP003A.ZooManagementSystem
     {
         static void Main(string[] args)
         {
-            Animal animal = new Animal();
-            
+
+
             List<Animal> animals = new List<Animal>();
-            animals.Add(new Lion());
-            animals.Add(new Parrot());
+
+            Lion lion = new Lion();
+            lion.Add(lion);
+
+            Parrot parrot = new Parrot();
+
 
             Console.WriteLine("Welcome to the Zoo Management System!");
-
 
             int choice;
             int done;
@@ -46,18 +50,18 @@ namespace COMP003A.ZooManagementSystem
                         try
                         {
                             Console.Write("\nEnter the name of the lion: ");
-                            string Name = Console.ReadLine();
-                               
-                            if (string.IsNullOrWhiteSpace(Name))  throw new Exception("Lion's name cannot be blank.");
+                            Name.Add(Console.ReadLine());
+
+                            if (string.IsNullOrWhiteSpace(Name)) throw new Exception("\nLion's name cannot be blank.");
                             break;
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine($"{ex.Message}\nPlease try agian.\n");
                         }
-                        
+
                     }
-                    
+
 
                     while (true)
                     {
@@ -65,7 +69,7 @@ namespace COMP003A.ZooManagementSystem
                         {
                             Console.Write("Enter the species of the lion: ");
                             string Species = Console.ReadLine();
-                            if (string.IsNullOrWhiteSpace(Species)) throw new Exception("Species cannot be blank.");
+                            if (string.IsNullOrWhiteSpace(Species)) throw new Exception("\nSpecies cannot be blank.");
                             break;
                         }
                         catch (Exception ex)
@@ -84,9 +88,9 @@ namespace COMP003A.ZooManagementSystem
                     {
                         try
                         {
-                            Console.Write("Enter the name of the Parrot: ");
+                            Console.Write("\nEnter the name of the Parrot: ");
                             string Name = Console.ReadLine();
-                            if (string.IsNullOrWhiteSpace(Name)) throw new Exception("Parrot's name cannot be blank.");
+                            if (string.IsNullOrWhiteSpace(Name)) throw new Exception("\nParrot's name cannot be blank.");
                             break;
                         }
                         catch (Exception ex)
@@ -101,7 +105,7 @@ namespace COMP003A.ZooManagementSystem
                         {
                             Console.Write("Enter the species of the Parrot: ");
                             string Species = Console.ReadLine();
-                            if (string.IsNullOrWhiteSpace(Species)) throw new Exception("Species cannot be blank.");
+                            if (string.IsNullOrWhiteSpace(Species)) throw new Exception("\nSpecies cannot be blank.");
                             break;
                         }
                         catch (Exception ex)
@@ -117,13 +121,17 @@ namespace COMP003A.ZooManagementSystem
                 else if (choice == 3)
                 {//this area needs work 
                     Console.WriteLine("\nDisplaying all Animals:");
-                    Console.WriteLine($"{animal.MakeSound}");
-                    Console.WriteLine($"{animal.MakeSound}");
+                    foreach (Animal animal in animals)
+                    {
+                        animal.MakeSound();
+                    }
                 }
-
                 else if (choice == 4)
                 {
-                    //will display all of animals description
+                    ZooUtility.DescribeAnimal("Simba");
+                    ZooUtility.DescribeAnimal("Polly", "Psittaciformes");
+                    ZooUtility.DescribeAnimal("Charlie", "Elephant", 12);
+
                 }
 
                 else

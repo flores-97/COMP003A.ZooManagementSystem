@@ -1,30 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace COMP003A.ZooManagementSystem
+﻿namespace COMP003A.ZooManagementSystem
 {
     class Parrot : Animal
     {
-        //auto implement property
-        public string Name { get; set; }
-        public string Species { get; set; }
 
         /// <summary>
         /// constructor
         /// </summary>
         /// <param name="name"></param>
         /// <param name="species"></param>
-        public Parrot(string name, string species)
+        public Parrot(string parrotName, string parrotSpecies)
         {
-            Name = name;
-            Species = species;
+            Name = parrotName;
+            Species = parrotSpecies;
         }
         public override void MakeSound()
         {
-            Console.WriteLine("The bird squawks!");
+            Console.WriteLine($"The parrot squawks! ({Name}, {Species})");
         }
     }
 }
