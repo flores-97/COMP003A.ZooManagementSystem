@@ -2,7 +2,6 @@
 {
     internal class Lion : Animal
     {
-
         /// <summary>
         /// constructor
         /// </summary>

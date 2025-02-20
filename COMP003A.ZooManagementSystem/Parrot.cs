@@ -2,7 +2,6 @@
 {
     class Parrot : Animal
     {
-
         /// <summary>
         /// constructor
         /// </summary>
