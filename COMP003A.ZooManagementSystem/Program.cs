@@ -14,15 +14,11 @@ namespace COMP003A.ZooManagementSystem
 
             List<Animal> animals = new List<Animal>();
 
-            Lion lion = new Lion();
-            animals.Add(lion);
-            lion.Name = Console.ReadLine();
-            lion.Species = Console.ReadLine();
+            string lionName = Console.ReadLine();
+            string lionSpecies = Console.ReadLine();    
 
-            Parrot parrot = new Parrot();
-            animals.Add(parrot);
-            parrot.Name = Console.ReadLine();
-            parrot.Species = Console.ReadLine();
+            string parrotName = Console.ReadLine();
+            string parrotSpecies = Console.ReadLine();
 
 
             Console.WriteLine("Welcome to the Zoo Management System!");
@@ -63,16 +59,14 @@ namespace COMP003A.ZooManagementSystem
                         {
                             Console.WriteLine($"{ex.Message}\nPlease try agian.\n");
                         }
-
                     }
-
-
                     while (true)
                     {
                         try
                         {
                             Console.Write("Enter the species of the lion: ");
                             string Species = Console.ReadLine();
+
                             if (string.IsNullOrWhiteSpace(Species)) throw new Exception("\nSpecies cannot be blank.");
                             break;
                         }
@@ -81,6 +75,9 @@ namespace COMP003A.ZooManagementSystem
                             Console.WriteLine($"{ex.Message}\nPlease try agian.\n");
                         }
                     }
+                    Lion lion = new Lion(lionName, lionSpecies);
+                    animals.Add(lion);
+                    
 
                     Console.WriteLine("Lion added successfully!");
                 }
@@ -117,6 +114,8 @@ namespace COMP003A.ZooManagementSystem
                             Console.WriteLine($"{ex.Message}\nPlease try agian.\n");
                         }
                     }
+                    Parrot parrot = new Parrot(parrotName, parrotSpecies);
+                    animals.Add(parrot);
 
                     Console.WriteLine("Parrot added successfully!");
                 }

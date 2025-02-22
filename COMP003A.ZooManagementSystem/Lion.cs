@@ -1,17 +1,23 @@
-﻿namespace COMP003A.ZooManagementSystem
+﻿using System.Xml.Linq;
+
+namespace COMP003A.ZooManagementSystem
 {
     internal class Lion : Animal
     {
         /// <summary>
         /// constructor
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="species"></param>
-        public Lion(string Name, string Species) 
+        /// <param name="Name"></param>
+        /// <param name="Species"></param>
+        public Lion(string lionName, string lionSpecies) 
         {
-            Name = Name;
-            Species = Species;
+            Name = lionName;
+            Species = lionSpecies;
         }
+
+        /// <summary>
+        /// will override to make sound displaying name and species
+        /// </summary>
         public override void MakeSound()
         {
             Console.WriteLine($"The lion roars! ({Name}, {Species})");

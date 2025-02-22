@@ -11,7 +11,7 @@
         {
             get { return _name; }
             set {
-                if (string.IsNullOrWhiteSpace(_name)) ;
+                if (string.IsNullOrWhiteSpace(value)) ;
                 else
                 {
                     _name = value;
