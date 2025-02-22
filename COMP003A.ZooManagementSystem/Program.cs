@@ -126,6 +126,7 @@ namespace COMP003A.ZooManagementSystem
                     Console.WriteLine("\nDisplaying all Animals:");
                     foreach (Animal animal in animals)
                     {
+                        Console.WriteLine($"({animal.Name}, {animal.Species})");
                         animal.MakeSound();
                     }
                 }
