@@ -2,9 +2,6 @@
 {
     class Parrot : Animal
     {
-        public string Name { get; set; }
-        public string Species { get; set; }
-
         /// <summary>
         /// constructor
         /// </summary>
@@ -21,7 +18,7 @@
         /// </summary>
         public override void MakeSound()
         {
-            Console.WriteLine($"The parrot squawks!");
+            Console.WriteLine($"The parrot squawks! ({Name}, {Species})");
         }
     }
 }

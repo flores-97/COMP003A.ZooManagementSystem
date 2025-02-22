@@ -79,7 +79,7 @@ namespace COMP003A.ZooManagementSystem
                     animals.Add(lion);
                     
 
-                    Console.WriteLine("Lion added successfully!");
+                    Console.WriteLine("\nLion added successfully!");
                 }
 
                 else if (choice == 2)
@@ -131,7 +131,7 @@ namespace COMP003A.ZooManagementSystem
                 }
                 else if (choice == 4)
                 {
-                    ZooUtility.DescribeAnimal("Simba");
+                    ZooUtility.DescribeAnimal("\nSimba");
                     ZooUtility.DescribeAnimal("Polly", "Psittaciformes");
                     ZooUtility.DescribeAnimal("Charlie", "Elephant", 12);
 
